@@ -20,7 +20,7 @@
 
   .header {
     &-home {
-      height: 10rem;
+      height: 20rem;
       border-bottom: 3px solid $main-color;
       background-position: 20% 30%;
 
@@ -56,6 +56,13 @@
     }
   }
 
+  .about {
+    &-top {
+      .about-info {
+        flex-direction: column;
+      }
+    }
+  }
   .main-footer {
     height: 7rem;
 
@@ -84,6 +91,39 @@
 
     &-last {
       grid-template-columns: 2fr;
+    }
+  }
+
+  .contact {
+    &-top {
+      .text-fields {
+        grid-template-areas:
+          "name"
+          "subject"
+          "email"
+          "phone"
+          "message";
+      }
+    }
+
+    &-middle {
+      div {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px #555 solid;
+
+        &:last-child {
+          border: none;
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    &-bottom {
+      h1 {
+        font-size: 2rem;
+      }
     }
   }
 }
